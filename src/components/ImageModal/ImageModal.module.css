@@ -1,0 +1,25 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: rgb(220, 220, 220);
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 95%;
+  max-height: 95%;
+  color: black;
+}
+.modalImage {
+  max-width: 1000px;
+  max-height: 650px;
+  object-fit: cover;
+}
