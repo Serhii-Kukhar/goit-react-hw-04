@@ -16,12 +16,15 @@ const SearchBar = ({ handleChangeQuery }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleChangeQuery(query);
-    setQuery("");
-    if (!query) {
+
+    const trimmedQuery = query.trim();
+    if (trimmedQuery === "") {
       notify();
       return;
     }
+
+    handleChangeQuery(trimmedQuery);
+    setQuery("");
   };
 
   return (

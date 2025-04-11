@@ -40,8 +40,8 @@ const App = () => {
             });
           }, 300);
         }
-      } catch (error) {
-        setError(error);
+      } catch {
+        setError(true);
       } finally {
         setIsLoading(false);
       }
@@ -53,12 +53,6 @@ const App = () => {
   }, [query, page]);
 
   const handleChangeQuery = (newQuery) => {
-    const trimmedQuery = newQuery.trim();
-    if (trimmedQuery === "") {
-      toast.error;
-      return;
-    }
-
     setQuery(newQuery);
     setImages([]);
     setPage(1);
@@ -94,8 +88,6 @@ const App = () => {
 
       {loadMore && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
       {loadMore && isLoading && <Loader />}
-
-      <ImageModal image={selectedImage} onClose={closeModal} />
     </div>
   );
 };

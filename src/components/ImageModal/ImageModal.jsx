@@ -30,7 +30,7 @@ const ImageModal = ({ isOpen, onClose, image }) => {
         src={image.urls.regular}
         alt={image.alt_description}
       />
-
+      <h3>🖤 {image.likes}</h3>
       <h3>{image.alt_description}</h3>
       <p> {image.user.name}</p>
     </Modal>
